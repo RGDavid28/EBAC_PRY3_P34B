@@ -37,21 +37,22 @@ function LoginApp() {
     };
     return (
         <>
+        
         <FormBody>        
-    
             <FormTitle>Welcome to eComerce Products</FormTitle>
 
             <FormApp ref={form} onSubmit={handleSubmit(onSubmit)}>
-                <FormLabel><FormText>Email</FormText> <FormInput type="email" {...register("email", { required: true })} /> </FormLabel> 
+                <FormLabel for="eMail" ><FormText>Email</FormText> <FormInput id="eMail" type="email" {...register("email", { required: true })} /> </FormLabel> 
                     {errors.email && <span style={{ color: "red" }}>
                         *Email* is mandatory </span>}
-                <FormLabel><FormText>Password</FormText> <FormInput type="password" {...register("password")} /> </FormLabel>
+                <FormLabel for="Password" ><FormText>Password</FormText> <FormInput id="Password" type="password" {...register("password")} /> </FormLabel>
                 <FormInputSubEx>
                     <FormInputSub type={"submit"} style={{ backgroundColor: "#a1eafb" }} />
                     <FormInputClk onClick={(e) => newUserSubmit()}>New User</FormInputClk> 
                 </FormInputSubEx>            
             </FormApp>
         </FormBody>
+        
         </>    
     );
 }

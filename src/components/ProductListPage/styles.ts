@@ -139,7 +139,7 @@ const FormBody = styled.section`
     flex-direction: column;
 `;
 
-const FormTitle = styled.p`
+const FormTitle = styled.h1`
     text-align: center;
     width: 40vw;
     background-color: #bea4d6;

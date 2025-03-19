@@ -46,6 +46,7 @@ const ProductListPage = () => {
                                 <ProductInfo>Description {product.description}</ProductInfo>
                                 <ProductPrice precio={Number(product.price)}>Price       <span>{product.price}</span></ProductPrice>
                                 <DetailButton 
+                                    aria-label = "Click for send to product car"
                                     size="small" 
                                     variant="outlined"
                                     onClick={(e) => handleAddToCart(product)}

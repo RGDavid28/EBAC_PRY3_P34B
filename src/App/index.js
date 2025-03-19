@@ -13,6 +13,7 @@ function App() {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />    
+      <meta http-equiv="content-language" content="en-us"/>
       <div className="App">
         <Routes>
           <Route path="/product-list" element={<ProductListPage/>} />

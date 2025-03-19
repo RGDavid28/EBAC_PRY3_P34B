@@ -30,11 +30,11 @@ function FillUserForm() {
             <FormTitle>New Users Add to eComerce</FormTitle>
 
             <FormApp ref={form} onSubmit={handleSubmit(onSubmit)}>
-                <FormLabel><FormText>Name</FormText><FormInput type="text" {...register("name")} /> </FormLabel>
-                <FormLabel><FormText>Email</FormText><FormInput type="email" {...register("email", { required: true })}/> </FormLabel>
+                <FormLabel for="nombre"><FormText>Name</FormText><FormInput id="nombre" type="text" {...register("name")} /> </FormLabel>
+                <FormLabel for="eMail" ><FormText>Email</FormText><FormInput id="eMail" type="email" {...register("email", { required: true })}/> </FormLabel>
                     {errors.email && <span style={{ color: "red" }}>
                         *Email* is mandatory </span>}
-                <FormLabel><FormText>Passwor</FormText><FormInput type="password" {...register("password")} /> </FormLabel>
+                <FormLabel for="password" ><FormText>Passwor</FormText><FormInput id="password" type="password" {...register("password")} /> </FormLabel>
                 <FormInputSubEx>
                     <FormInputSub type={"submit"} style={{ backgroundColor: "#a1eafb" }} />
                     <FormInputClk onClick={(e) => returnLogin()}>Go Login</FormInputClk>

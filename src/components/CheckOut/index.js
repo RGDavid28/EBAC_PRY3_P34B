@@ -11,11 +11,7 @@ function CheckOut() {
 
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-//    if (compraData) {
-//        const compra = compraData.compra;
-//        const direccion = compraData.direccion;
-//        const metpago   = compraData.metpago;
-//    }
+    
 
     const onSubmit = (data) => {
 
@@ -32,11 +28,11 @@ function CheckOut() {
             <FormTitle>Purchase Confirm </FormTitle>
 
             <FormApp ref={form} onSubmit={handleSubmit(onSubmit)}>
-                <FormLabel><FormText>Ship to</FormText><FormInput type="text" {...register("shipto")} /> </FormLabel>
+                <FormLabel for="shipTo" ><FormText>Ship to</FormText><FormInput id="shipTo" type="text" {...register("shipto")} /> </FormLabel>
                                                             
-                <FormLabel><FormText>Payment method</FormText>
+                <FormLabel for="paymentMethod" ><FormText>Payment method</FormText>
                             
-                        <FormSelect name="metpago">
+                        <FormSelect id="paymentMethod" name="metpago">
                             <option value=""           >Select</option>
                             <option value="Credit Card">Credit Card</option>
                             <option value="Debit Card">Debit Card</option>
@@ -46,7 +42,7 @@ function CheckOut() {
                 </FormLabel>
                 {errors.metpago && <span style={{ color: "red" }}> *Payment method* is mandatory </span>}
 
-                <FormLabel><FormText>Payment ID</FormText><FormInput type="text" name="compra" value="CheckOut"/> </FormLabel>        
+                <FormLabel for="paymentID" ><FormText>Payment ID</FormText><FormInput id="paymentID" type="text" name="compra" value="CheckOut"/> </FormLabel>        
                 <FormInputSubEx>
                     <FormInputSub type={"submit"} style={{ backgroundColor: "#a1eafb" }} />                    
                 </FormInputSubEx>

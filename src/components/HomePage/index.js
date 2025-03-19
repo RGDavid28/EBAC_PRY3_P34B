@@ -17,12 +17,12 @@ const HomePage = () => {
     <HeaderPrincipal>
         <PlHeader>Home Page</PlHeader>
         <br/>
-        <LinkPath>
-            <Link to="/product-list">Go to Product List</Link>
+        <LinkPath id="Acceso principal">
+            <Link id="Acceso principal" role="To see and select to the product list" to="/product-list">Go to Product List</Link>
             <p>|</p>
-            <Link to="/check-out">Purchase Confirm</Link>
+            <Link id="Acceso principal" role="Go to give the purchase data" to="/check-out">Purchase Confirm</Link>
             <p>|</p>
-            <Link to="/">Login</Link>
+            <Link id="Acceso principal" role="Go to the initial screen" to="/">Login</Link>
         </LinkPath>    
         <PlHeader1>shopping cart</PlHeader1>
         <DetailPrincipal>
@@ -38,6 +38,7 @@ const HomePage = () => {
                     size="small" 
                     variant="outlined"
                     onClick={(e) => handleDeleteToCart(citem.id)}
+                    aria-label = "Click for delete the product car"
                 >
                     Delete
                 </DetailButton>
